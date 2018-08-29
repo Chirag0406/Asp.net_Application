@@ -1,0 +1,14 @@
+﻿@model LoremlpsumCorpWeb.ViewModels.ContactViewModel
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="heading">@ViewBag.Title</h1>
+        <div>
+            @Html.Partial("_ContactForm")
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model LoremlpsumCorpWeb.ViewModels.ContactViewModel
+
+<div>
+    @using (Ajax.BeginForm("ContactDetails", "Home",
+            new AjaxOptions
+            {
+                OnSuccess = "OnSuccess",
+                OnFailure = "OnFailure",
+            }, new { id = "contactUsForm" }))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "p-content" })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control p-content", placeholder = "Please enter your email", type = "email", required = "required", autofocus = "autofocus" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, new { @class = "p-content" })
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control p-content ", placeholder = "Please enter your name", required = "required", type = "text" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Question, new { @class = "p-content" })
+                    @Html.TextAreaFor(m => m.Question, new { @class = "form-control p-content d-block", cols = "60", rows = "5", placeholder = "Please enter your question", required = "required" })
+                </div>
+            </div>
+        </div>
+        <div>
+            <input class="btn btn-success text-uppercase p-content mb-5" type="submit" value="Submit" />
+            @Html.ActionLink("CANCEL", "Index", new { controller = "Home", id = "" }, new { @class = "btn btn-light mb-5 text-uppercase" })
+        </div>
+    }
+
+    @Scripts.Render("~/Content/formSubmit.js")
+</div>

@@ -1,0 +1,95 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
+
+.white-wrap {
+    white-space: pre-wrap
+}
+
+
+.navbar-txt-lg {
+    float: left;
+    font: 22px arial, sans-serif;
+    font-weight: bold;
+    line-height: 26px;
+    color: #000;
+}
+
+.navbar-txt-sm {
+    float: left;
+    font: 18px arial, sans-serif;
+    font-weight: bold;
+    line-height: 23px;
+    color: black !important;
+}
+
+.wdt-max {
+    max-width: 1140px;
+}
+
+.p-content {
+    font: 18px arial, sans-serif;
+    line-height: 28px;
+    color: black;
+}
+
+.main-img-new {
+    max-width: 750px;
+    max-height: 380px;
+    width: 100%;
+    height: auto;
+}
+
+.form-textarea {
+    width: 80%;
+    max-width: 1140px
+}
+
+.p-left {
+    padding-left:43%
+}
+
+.footer-wrap {
+    padding:30px 0px;
+}
+
+.footer-wrap a {
+    color:#fff;
+}
+
+.footer-wrap a:hover {
+    color: #fff;
+}
+
+.heading {
+    margin-bottom:30px;
+}
+
+.form-control {
+    border-color:#000 !important
+}
+
+.a {
+    color:#000;
+}

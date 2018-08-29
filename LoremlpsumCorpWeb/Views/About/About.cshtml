@@ -1,0 +1,12 @@
+﻿@model LoremlpsumCorpWeb.ViewModels.PageViewModel
+
+@{
+    ViewBag.Title = "About";
+}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        @Html.ActionLink("Edit About", "Edit", new { controller = "About", id = "" }, new { @class = "btn btn-success text-uppercase", type = "button" })
+        <h1 class="heading mt-2">@Model.Heading</h1>
+        <p class="text-justify p-content white-wrap">@Model.Content</p>
+    </div>
+</div>

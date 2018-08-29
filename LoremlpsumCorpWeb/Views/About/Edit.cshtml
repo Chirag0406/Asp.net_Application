@@ -1,0 +1,31 @@
+﻿@model LoremlpsumCorpWeb.ViewModels.PageViewModel
+
+@{
+    ViewBag.Title = "Edit About";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="heading">@ViewBag.Title</h1>
+        <form action="/About/EditAbout" method="post">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Heading, new { @class = "p-content" })
+                        @Html.TextAreaFor(m => m.Heading, new { @class = "p-content form-control", cols = "60", rows = "1", required = "required", value = Model.Heading })
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Content, new { @class = "p-content", value="About text"})
+                        @Html.TextAreaFor(m => m.Content, new { @class = "p-content form-control", cols = "60", rows = "10", required = "required", value = Model.Content })
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input class="btn btn-success p-content mb-5 text-uppercase" type="submit" value="Save" />
+                @Html.ActionLink("Cancel", "About", new { controller = "About", id = "" }, new { @class = "btn btn-light mb-5 text-uppercase" })
+            </div>
+        </form>
+    </div>
+</div>
